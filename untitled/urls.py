@@ -17,11 +17,16 @@ from django.contrib import admin
 from django.urls import path, include
 from untitled import views
 from django.views.generic.base import TemplateView
-from untitled.calc.views import CalcView
 from untitled.views import IndexView
+from untitled.n13.views import goto_13
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
+    path('13', goto_13, name='13'),
     path('', IndexView.as_view(template_name="index.html")),
-    path('calc/', CalcView.as_view()),
     #path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
