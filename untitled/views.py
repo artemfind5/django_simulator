@@ -4,6 +4,8 @@
  #   return render(request, 'index.html', context={
   #      'who': 'World',
    # })
+#<iframe src="header.html" seamless/>
+
 from django.views.generic.base import TemplateView
 
 class IndexView(TemplateView):

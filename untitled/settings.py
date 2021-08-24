@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'untitled',
     'untitled.n13',
+    'menu'
 ]
 
 MIDDLEWARE = [

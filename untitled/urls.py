@@ -25,7 +25,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('13', goto_13, name='13'),
     path('', IndexView.as_view(template_name="index.html")),
-    #path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:
