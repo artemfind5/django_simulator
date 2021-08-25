@@ -1,0 +1,30 @@
+{% include "header.html" %}
+<hr>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+</head>
+<body>
+    <p>Data:</p>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Type</th>
+        </tr>
+        {% for item in query_results %}
+        <tr>
+            <td>{{ item.id }}</td>
+            <td>{{ item.type }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <hr>
+    {% include "footer.html" %}
+
+</body>
+</html>

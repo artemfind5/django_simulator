@@ -18,13 +18,15 @@ from django.urls import path, include
 from untitled import views
 from django.views.generic.base import TemplateView
 from untitled.views import IndexView
-from untitled.n13.views import goto_13
+from untitled.n13.views import main
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('13', goto_13, name='13'),
-    path('', IndexView.as_view(template_name="index.html")),
+    path('13', main, name='13'),
+    path('42', main, name='42'),
+    path('70', main, name='70'),
+    path('', IndexView.as_view(template_name="index.html"), name="home"),
     path('admin/', admin.site.urls),
 ]
 
