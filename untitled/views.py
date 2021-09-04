@@ -18,3 +18,8 @@ class IndexView(TemplateView):
         context['who'] = 'World'
         return context
 
+class AboutPageView(TemplateView):
+    template_name = 'fun.html'
+
+class TempPageView(TemplateView):
+    template_name = 'temp.html'

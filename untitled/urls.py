@@ -27,6 +27,8 @@ urlpatterns = [
     path('42', main, name='42'),
     path('70', main, name='70'),
     path('', IndexView.as_view(template_name="index.html"), name="home"),
+    path('fun', IndexView.as_view(template_name="fun.html"), name="fun"),
+    path('temp', IndexView.as_view(template_name="temp.html"), name="temp"),
     path('admin/', admin.site.urls),
 ]
 
