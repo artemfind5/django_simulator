@@ -1,13 +1,19 @@
 {% include "header.html" %}
 <hr>
 
+    {% load render_table from django_tables2 %}
+    {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Untitled</title>
+    <title>Data</title>
+    <link rel="stylesheet" href="{% static 'django_tables2/themes/paleblue/css/screen.css' %}" />
 </head>
 <body>
+    {% render_table acts %}
+
     <p>Data:</p>
 
     <table>
